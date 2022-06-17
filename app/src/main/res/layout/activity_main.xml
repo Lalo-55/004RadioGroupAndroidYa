@@ -7,12 +7,94 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:gravity="center_horizontal"
+        android:text="Resultado!"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btOperar" />
+
+    <EditText
+        android:id="@+id/etNumero1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Ingrese le primer valor"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNumero2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Ingrese le segundo valor"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNumero1" />
+
+    <RadioGroup
+        android:id="@+id/rgbGrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNumero2">
+
+        <RadioButton
+            android:id="@+id/rbSumar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:gravity="center|center_horizontal"
+            android:text="Sumar" />
+
+        <RadioButton
+            android:id="@+id/rbRestar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:gravity="center|center_horizontal"
+            android:text="Restar" />
+
+        <RadioButton
+            android:id="@+id/rbMulti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:gravity="center|center_horizontal"
+            android:text="Multi" />
+
+        <RadioButton
+            android:id="@+id/rbDividir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:gravity="center|center_horizontal"
+            android:text="Dividir" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btOperar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Operar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgbGrop" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
